@@ -25,6 +25,9 @@ echo -e "sed -r '/(^#|#|^$)/d' nginx.conf:\n`sed -r '/(^#|#|^$)/d' nginx.conf`\n
 
 # sed -s 查找替换
 echo -e "sed 's/line/enil/' data_for_sed.txt:\n`sed -r 's/line/enil/' data_for_sed.txt`\n"
+echo -e "sed 's/line/enil/g' data_for_sed.txt:\n`sed -r 's/line/enil/g' data_for_sed.txt`\n"
+echo -e "sed '3s/line/enil/w data_for_sed_w.txt' data_for_sed.txt:\n`sed -r '3s/line/enil/w data_for_sed_w.txt' data_for_sed.txt`\n" && cat data_for_sed_w.txt
+echo
 
 # sed -c 更改
 echo -e "sed 'c\hello world' data_for_sed.txt:\n`sed -r 'c\hello world' data_for_sed.txt`\n"
@@ -34,4 +37,10 @@ echo -e "sed 'y/lot/LOT/' data_for_sed.txt:\n`sed -r 'y/lot/LOT/' data_for_sed.t
 
 # sed -p 在匹配前面添加
 echo -e "sed 'p' data_for_sed.txt:\n`sed 'p' data_for_sed.txt`\n"
+
+# sed -n 抑制自动输出
+echo -e "sed -n '3s/line/special line/p' data_for_sed.txt:\n`sed -n '3s/line/special line/p' data_for_sed.txt`\n"
+
+# sed -e 多个command时使用
+echo -e "sed -e '3s/line/special line/;s/text/special text/' data_for_sed.txt:\n`sed -e '3s/line/special line/;s/text/special text/' data_for_sed.txt`\n"
 
