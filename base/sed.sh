@@ -44,3 +44,6 @@ echo -e "sed -n '3s/line/special line/p' data_for_sed.txt:\n`sed -n '3s/line/spe
 # sed -e 多个command时使用
 echo -e "sed -e '3s/line/special line/;s/text/special text/' data_for_sed.txt:\n`sed -e '3s/line/special line/;s/text/special text/' data_for_sed.txt`\n"
 
+# sed小技巧 $=统计行号
+echo -e "sed -n '$=' data_for_sed.txt:\n`sed -n '$=' data_for_sed.txt`\n"
+
