@@ -51,4 +51,17 @@ echo -e "awk 'BEGIN{FIELDWIDTHS=\"2 2 2\"}NR==1{print \$1,\$2,\$3}' data_for_sed
 echo -e "awk 'BEGIN{FS=\":\";OFS=\"-\"}\$1==\"root\"{print \$1,\$2,\$3,\$6,\$7}' /etc/passwd:\n`awk 'BEGIN{FS=":";OFS="-"}$1=="root"{print $1,$2,$3,$6,$7}' /etc/passwd`\n"
 echo -e "awk 'BEGIN{RS=\"\\\n\";ORS=\"####\"};NR<3{print \$0,\$2,\"\\\n\"}' data_for_sed.txt:\n`awk 'BEGIN{RS="\n";ORS="####"};NR<3{print $0,$2,"\n"}' data_for_sed.txt`\n"
 
+# awk 示例
+echo -e "seq 1 10 > num.txt && awk '{if(\$1>5)print \$0}' num.txt:\n`seq 1 10 > num.txt && awk '{if($1>5)print $0}' num.txt`\n"
+echo -e "seq 1 10 > num.txt && awk -v 'sum=0' '{sum+=\$1;print sum}' num.txt:\n`seq 1 10 > num.txt && awk -v 'sum=0' '{sum+=$1;print sum}' num.txt`\n"
+echo -e "seq 1 10 > num.txt && awk -v 'sum=0' '{sum+=\$1}END{print sum}' num.txt:\n`seq 1 10 > num.txt && awk -v 'sum=0' '{sum+=$1}END{print sum}' num.txt`\n"
+echo -e "seq 1 10 > num.txt && awk '{sum=0;for (i=1;i<4;i++) sum+=\$1; print sum}' num.txt:\n`seq 1 10 > num.txt && awk '{sum=0;for (i=1;i<4;i++) sum+=$1; print sum}' num.txt`\n"
+echo -e "seq 1 10 > num.txt && awk '{sum=0;for (i=1;i<4;i++){sum+=\$1}print sum}' num.txt:\n`seq 1 10 > num.txt && awk '{sum=0;for (i=1;i<4;i++){sum+=$1}print sum}' num.txt`\n"
+
+# awk 打印文本行数
+echo -e "seq 1 10 > num.txt && awk 'END{print NR}' num.txt:\n`seq 1 10 > num.txt && awk 'END{print NR}' num.txt`\n"
+# awk 打印文本最后一行内容
+echo -e "seq 1 10 > num.txt && awk 'END{print \$0}' num.txt:\n`seq 1 10 > num.txt && awk 'END{print \$0}' num.txt`\n"
+# awk 打印文本列数
+echo -e "seq 1 10 > num.txt && awk 'END{print NF}' num.txt:\n`seq 1 10 > num.txt && awk 'END{print NF}' num.txt`\n"
 
