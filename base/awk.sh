@@ -52,3 +52,5 @@ echo -e "awk 'BEGIN{FS=\":\";OFS=\"-\"}\$1==\"root\"{print \$1,\$2,\$3,\$6,\$7}'
 echo -e "awk 'BEGIN{RS=\"\\\n\";ORS=\"####\"};NR<3{print \$0,\$2,\"\\\n\"}' data_for_sed.txt:\n`awk 'BEGIN{RS="\n";ORS="####"};NR<3{print $0,$2,"\n"}' data_for_sed.txt`\n"
 
 
+# 使用awk 查找正在使用的网卡
+echo -e `ifconfig|grep enp|awk -F ":" 'NR==1{print $1}'`
