@@ -1,5 +1,4 @@
 #!/bin/bash
-# 5.找出占用CPU内存过高的进程脚本.sh
 # 日志格式: $remote_addr - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" "$http_x_forwarded_for"
 LOG_FILE=$1
 echo "统计访问最多的10个IP"

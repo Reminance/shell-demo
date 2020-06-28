@@ -1,5 +1,4 @@
 #!/bin/bash
-# 3.批量创建100用户并设置密码脚本.sh
 DATE=$(date +%F_%H-%M-%S)
 HOST=localhost
 USER=backup

@@ -1,5 +1,4 @@
 #!/bin/bash
-# 7.监控100台服务器磁盘利用率脚本.sh
 function cpu() {
     NUM=1
     while [ $NUM -le 3 ]; do

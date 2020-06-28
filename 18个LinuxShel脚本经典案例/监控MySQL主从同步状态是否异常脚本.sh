@@ -1,5 +1,4 @@
 #!/bin/bash  
-# 15.自动发布Java项目（Tomcat）.sh
 HOST=localhost
 USER=root
 PASSWD=123.com

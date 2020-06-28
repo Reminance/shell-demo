@@ -1,5 +1,4 @@
 #!/bin/bash
-# 8.批量检测网站是否异常脚本.sh
 NGINX_V=1.15.6
 PHP_V=5.6.36
 TMP_DIR=/tmp

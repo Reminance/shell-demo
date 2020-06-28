@@ -1,5 +1,4 @@
 #!/bin/bash
-# 14.nginx访问访问日志按天切割.sh
 HOST_INFO=host.info
 for IP in $(awk '/^[^#]/{print $1}' $HOST_INFO); do
     USER=$(awk -v ip=$IP 'ip==$1{print $2}' $HOST_INFO)

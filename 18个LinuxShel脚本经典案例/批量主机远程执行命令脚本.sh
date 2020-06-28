@@ -1,5 +1,4 @@
 #!/bin/bash
-# 9.批量主机远程执行命令脚本.sh
 COMMAND=$*
 HOST_INFO=host.info
 for IP in $(awk '/^[^#]/{print $1}' $HOST_INFO); do

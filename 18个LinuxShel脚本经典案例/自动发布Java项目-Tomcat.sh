@@ -1,5 +1,4 @@
 #!/bin/bash
-# 17.Dos攻击防范（自动屏蔽攻击IP）.sh
 DATE=$(date +%F_%T)
 
 TOMCAT_NAME=$1

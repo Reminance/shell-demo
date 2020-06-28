@@ -1,5 +1,5 @@
 #!/bin/bash
-# 18.目录文件变化监控和实时文件同步.sh
+# QQ学员群: 545214087 , 微信学员群请加阿良老师微信邀请您: olizhenliang
 DATE=$(date +%F_%T)
 
 WWWROOT=/usr/local/nginx/html/$1

@@ -1,5 +1,4 @@
 #!/bin/bash  
-# 11.监控MySQL主从同步状态是否异常脚本.sh
 URL_LIST="www.baidu.com www.ctnrs.com"
 for URL in $URL_LIST; do
     FAIL_COUNT=0

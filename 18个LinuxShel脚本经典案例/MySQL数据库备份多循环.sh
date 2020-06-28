@@ -1,5 +1,4 @@
 #!/bin/bash
-# 4.一键查看服务器资源利用率.sh
 DATE=$(date +%F_%H-%M-%S)
 HOST=localhost
 USER=backup

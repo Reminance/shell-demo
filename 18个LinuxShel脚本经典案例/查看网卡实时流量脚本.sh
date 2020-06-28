@@ -1,5 +1,4 @@
 #!/bin/bash
-# 13.nginx访问日志分析脚本.sh
 NIC=$1
 echo -e " In ------ Out"
 while true; do

@@ -1,5 +1,4 @@
 #!/bin/bash
-# 10.一键部署LNMP网站平台脚本.sh
 DATE=$@
 USER_FILE=user.txt
 for USER in $USER_LIST; do

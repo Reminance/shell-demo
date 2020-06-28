@@ -1,5 +1,4 @@
 #!/bin/bash
-# 16.自动发布PHP项目脚本.sh
 
 MON_DIR=/opt
 inotifywait -mqr --format %f -e create $MON_DIR |\

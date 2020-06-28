@@ -1,5 +1,4 @@
 #!/bin/bash
-# 6.查看网卡实时流量脚本.sh
 LOG_DIR=/usr/local/nginx/logs
 YESTERDAY_TIME=$(date -d "yesterday" +%F)
 LOG_MONTH_DIR=$LOG_DIR/$(date +"%Y-%m")
